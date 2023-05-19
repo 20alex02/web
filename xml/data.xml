@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema.xsd"?>
+<products>
+    <product name="Apple iPhone 13" in_stock="true" warranty_days="365">
+        <description>Best smartphone on the market</description>
+        <category name="smartphones" type="electronic devices">
+            <photo source="https://im9.cz/iR/importprodukt-orig/5e7/5e734d393167e0a37cbbceed21e58661--mm2000x2000.jpg" />
+        </category>
+        <photos>
+            <photo source="https://im9.cz/iR/importprodukt-orig/ea7/ea7b3c56eed843fd2a349fd8f3122067--mm2000x2000.jpg" />
+        </photos>
+        <productPrices>
+            <productPrice price="20000" shipping_price="100" currency="czk">
+                <store name="alza" link="https://www.mall.cz/mobilni-telefony/apple-iphone-13-128gb-green-mngk3cn-a" is_authorized="true">
+                    <photo source="https://i.iinfo.cz/images/449/mall-cz-logo-1.jpg" />
+                    <reviews></reviews>
+                </store>
+            </productPrice>
+        </productPrices>
+        <reviews>
+            <review date="2022-12-28" rating="3">
+                <description>Not great not terrible</description>
+                <pros>speed</pros>
+                <cons>price</cons>
+                <customer name="John" surname="Jackson">
+                    <email>john__jackson@gmail.com</email>
+                    <phone_number>0800600600</phone_number>
+                    <address>Botanicka 56, Brno, 602 00</address>
+                </customer>
+            </review>
+        </reviews>
+    </product>
+
+    <product name="Black and Decker CS2245-QS" in_stock="false" warranty_days="90">
+        <description>Chainsaw for you</description>
+        <category name="chainsaws" type="house and garden">
+            <photo source="https://im9.cz/iR/importprodukt-orig/91b/91b3aa1c2fddd83f77ef5824c0f8cccb--mm2000x2000.jpg" />
+        </category>
+        <photos>
+            <photo source="https://im9.cz/iR/importprodukt-orig/ae5/ae5dd646aa43fc3aab1df81f44c865b5--mm2000x2000.jpg" />
+        </photos>
+        <productPrices>
+            <productPrice price="3116" shipping_price="250" currency="czk">
+                <store name="ab-com" link="https://www.ab-com.cz/black-decker-cs2245-qs/" is_authorized="false">
+                    <photo source="" />
+                    <reviews>
+                        <review date="2018-02-15" rating="5">
+                            <customer name="Jack" surname="Johnson">
+                                <email>jack_johnson@gmail.com</email>
+                                <phone_number>0711926826</phone_number>
+                                <address>Pavla Horova 12b, Brno, 602 00</address>
+                            </customer>
+                        </review>
+                    </reviews>
+                </store>
+            </productPrice>
+        </productPrices>
+        <reviews></reviews>
+    </product>
+</products>

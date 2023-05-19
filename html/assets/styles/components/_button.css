@@ -1,0 +1,13 @@
+button {
+  cursor: pointer;
+  border: none;
+  color: var(--black);
+  font-size: 1.8rem;
+  font-family: var(--font-family-sen);
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: 0;
+  padding: 1.6rem 4.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}

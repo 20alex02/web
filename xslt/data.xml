@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<social>
+
+    <users>
+        <user id="1">
+            <username>Jennie Nichols</username>
+            <handle>jennien</handle>
+            <email>jennie.nichols@example.com</email>
+            <password>deaff1efd3a3ba195c4d54defa1f334dc373254c325bee5e62dab08c79a35320</password>
+            <messages>
+                <message id="4db7017e-a610-479a-8e15-0b4a2df3b8bd" thread_id="04b83fcb-8b4c-43b7-9fba-b2f8522e2420" sent="2023-02-09T23:14:32">
+                    Just finished my morning run and feeling great! #fitness #motivation
+                </message>
+                <message id="0bfdf3d7-30f4-4674-8cf2-5d6efdb6edc6" thread_id="db31afa9-e32e-4e1d-9396-da06f60faab7" sent="2023-02-10T00:22:11" edited="0" reply_to="348cc429-1f8f-4f38-b4d7-386fe1e1b8d0">
+                    Definitely! It can be tough to find that balance, but setting boundaries and prioritizing self-care can help. #selfcarematters
+                </message>
+                <message id="f2d90dc1-e292-4e05-bada-d56e4712212f" thread_id="6e22d929-ded8-46d8-9f53-4ec4a725ae02" sent="2023-03-10T11:01:53" edited="1">
+                    Excited to announce that I'll be giving a TEDx talk next month on the future of technology! #TEDx #technology
+                </message>
+            </messages>
+        </user>
+        <user id="2">
+            <username>Sam Walters</username>
+            <handle>swalters</handle>
+            <email>sam.walters@example.com</email>
+            <password>e5dc43523856aa7cce9933550375a6e9bff2ec906d979570808296b09f52b90f</password>
+            <messages>
+                <message id="f506e407-353c-4f28-8c0c-9b1ca8075e0f" thread_id="6e22d929-ded8-46d8-9f53-4ec4a725ae02" sent="2023-02-10T01:23:15" reply_to="f2d90dc1-e292-4e05-bada-d56e4712212f">
+                    So cool! What do you think will be the biggest advancements in technology in the next few years? #techtrends
+                </message>
+                <message id="bf4d0bce-a4b1-4928-8c4f-407728a6e8c8" thread_id="db31afa9-e32e-4e1d-9396-da06f60faab7" sent="2023-02-10T08:44:31" reply_to="0bfdf3d7-30f4-4674-8cf2-5d6efdb6edc6">
+                    It's all about prioritizing and making time for the things that matter most. What strategies have you found helpful? #worklifebalance
+                </message>
+                <message id="9c16c249-5fad-41e1-b94a-ffbf6371a9fa" thread_id="04b83fcb-8b4c-43b7-9fba-b2f8522e2420" sent="2023-03-11T13:06:51" reply_to="4db7017e-a610-479a-8e15-0b4a2df3b8bd">
+                    I need to start incorporating morning runs into my routine. How do you stay motivated to keep it up? #runningtips
+                </message>
+            </messages>
+        </user>
+    </users>
+
+    <groups>
+        <group id="1">
+            <groupname>Tech Enthusiasts</groupname>
+            <description>A community for technology enthusiasts to discuss and share their latest tech finds and thoughts.</description>
+            <members>
+                <member id="1" username="Jennie Nichols" />
+                <member id="2" username="Sam Walters" />
+            </members>
+            <posts>
+                <post id="f5a9385c-041f-444c-8663-df9fd5221687" sent="2023-02-11T15:30:00">
+                    Just got my hands on the new Samsung Galaxy S30 and I'm loving it! What's your favorite smartphone and why? #SamsungGalaxy #smartphone
+                </post>
+                <post id="9f912a64-6fa0-47bb-9e2e-3feb20afee2c" sent="2023-02-12T08:45:23" reply_to="f5a9385c-041f-444c-8663-df9fd5221687">
+                    I'm still a fan of the iPhone, I love the seamless integration with my other Apple devices. How's the camera on the Galaxy S30? #iPhone #GalaxyS30Camera
+                </post>
+            </posts>
+        </group>
+    </groups>
+
+    <events>
+        <event id="1">
+            <eventname>TEDx Talk: The Future of Technology</eventname>
+            <date>2023-03-20T18:30:00</date>
+            <location>City Hall, 123 Main St, Anytown USA</location>
+            <description>Join Jennie Nichols as she shares her thoughts on the future of technology and what's in store for the next few years.</description>
+            <attendees>
+                <attendee id="1" username="Jennie Nichols" />
+                <attendee id="2" username="Sam Walters" />
+            </attendees>
+        </event>
+    </events>
+
+</social>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="products">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="description" type="xs:string"/>
+                            <xs:element name="category">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="photo">
+                                            <xs:complexType>
+                                                <xs:attribute name="source" type="xs:anyURI" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element> 
+                                    </xs:sequence>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="type" type="xs:string" use="required"/>                
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="photos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="photo" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="source" type="xs:anyURI" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>        
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="productPrices">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="productPrice" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="store">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="photo">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="source" type="xs:anyURI" use="required"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="reviews">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="review" minOccurs="0" maxOccurs="unbounded">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="description" minOccurs="0"/>
+                                                                                        <xs:element name="pros" minOccurs="0"/>
+                                                                                        <xs:element name="cons" minOccurs="0"/>
+                                                                                        <xs:element name="customer">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element name="email" type="xs:string"/>
+                                                                                                    <xs:element name="phone_number" type="xs:int"/>
+                                                                                                    <xs:element name="address" type="xs:string"/>
+                                                                                                </xs:sequence>
+                                                                                                <xs:attribute name="name" type="xs:string" use="required"/>
+                                                                                                <xs:attribute name="surname" type="xs:string" use="required"/>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                    <xs:attribute name="date" type="xs:date" use="required"/>
+                                                                                    <xs:attribute name="rating" type="xs:int" use="required"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="name" type="xs:string" use="required"/>
+                                                            <xs:attribute name="link" type="xs:anyURI" use="required"/>
+                                                            <xs:attribute name="is_authorized" type="xs:boolean" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="price" type="xs:int" use="required"/>
+                                                <xs:attribute name="shipping_price" type="xs:int" use="required"/>
+                                                <xs:attribute name="currency" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>                                        
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="reviews">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="review" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="description" minOccurs="0"/>
+                                                    <xs:element name="pros" minOccurs="0"/>
+                                                    <xs:element name="cons" minOccurs="0"/>
+                                                    <xs:element name="customer">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="email" type="xs:string"/>
+                                                                <xs:element name="phone_number" type="xs:int"/>
+                                                                <xs:element name="address" type="xs:string"/>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="name" type="xs:string" use="required"/>
+                                                            <xs:attribute name="surname" type="xs:string" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="date" type="xs:date" use="required"/>
+                                                <xs:attribute name="rating" type="xs:int" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                        <xs:attribute name="in_stock" type="xs:boolean" use="required"/>
+                        <xs:attribute name="warranty_days" type="xs:int" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

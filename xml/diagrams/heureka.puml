@@ -1,0 +1,79 @@
+@startuml heureka
+
+skinparam linetype ortho
+
+entity Category {
+  * id <<uuid>>
+  --
+  * name: string
+  * type: string
+}
+
+entity Product {
+  * id <<uuid>>
+  --
+  * name: string
+  * description: string
+  * category_id: <<Category FK>>
+  * in_stock: bool
+  warranty_days: int
+}
+
+entity Photo {
+  * id <<uuid>>
+  --
+  * product_id: <<Product FK>>
+  * source: <<url>>
+}
+
+entity Store {
+  * id <<uuid>>
+  --
+  * name: string
+  * link: <<url>>
+  * is_authorized: bool
+}
+
+entity ProductPrice {
+  * id <<uuid>>
+  --
+  * price: int
+  * shipping_price: int
+  * currency: string
+  * product_id: <<Product FK>>
+  * store_id: <<Store FK>>
+}
+
+entity Review {
+  * id <<uuid>>
+  --
+  * date: date
+  * rating: int
+  description: string
+  pros: string
+  cons: string
+  * store_id: <<Store FK>>
+  * product_id: <<Product FK>>
+}
+
+entity Customer {
+  * id <<uuid>>
+  --
+  * name: string
+  * surname: string
+  * email: string
+  * phone_number: int
+  * address: string
+}
+
+Product }o..|| Category
+Category ||..|| Photo
+Product ||..o{ Photo
+Product ||..o{ ProductPrice
+ProductPrice }o..|| Store
+Store ||..|| Photo
+Review }o..|| Product
+Review }o..|| Store
+Review }o..|| Customer
+
+@enduml

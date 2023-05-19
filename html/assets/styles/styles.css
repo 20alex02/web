@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Sen:wght@400;700&display=swap');
+@import url('./abstracts/_variables.css');
+@import url('./abstracts/_reset.css');
+@import url('./base/_typography.css');
+@import url('./components/_blackquote.css');
+@import url('./components/_fieldset.css');
+@import url('./components/_button.css');
+@import url('./components/_form.css');
+@import url('./components/_input.css');
+@import url('./components/_nav.css');
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    background-color: var(--light);
+}
+
+header {
+    background: var(--black);
+    width: 100%;
+    height: 10rem;
+    padding: 2.5rem 0;
+}
+
+section {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto 12.8rem auto;
+    padding: 3.2rem 0;
+}
+
+section  p {
+    color: var(--light);
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-bottom: 4.8rem;
+    width: 60rem;
+}
+
+section:first-child {
+    max-width: none;
+    width: 100%;
+    background-color: rgba(35, 37, 54, 0.64);
+    background-image: url('../images/hero-img.png');
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+}
+
+section:first-child > div {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+section:first-child > div > span {
+    font-size: 1.6rem;
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    line-height: 2.8rem;
+    letter-spacing: .3rem;
+    color: var(--light);
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+}
+
+section:first-child > div > h1 {
+    color: var(--light);
+}
+
+main section button {
+    background: var(--yellow);
+}
+
+main section button:hover {
+    background: var(--light);
+}
+
+section:nth-child(2) {
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    gap: 3.2rem;
+}
+
+section:nth-child(2) article {
+    border: 0.1rem solid var(--light-grey);
+    padding: 3.2rem;
+}
+
+section:nth-child(2) article p {
+    color: var(--medium-grey);
+}
+
+section:nth-child(2) article > img {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 3.2rem;
+}
+
+section:nth-child(2) article blockquote {
+    margin-bottom: 1.6rem;
+}
+
+section:nth-child(2) article blockquote > cite {
+    font-family: var(--font-family-inter);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--dark-grey);
+    font-style: normal;
+}
+
+section article blockquote > cite > em {
+    color: var(--purple);
+    font-style: normal;
+}
+
+section article button:hover {
+    background: var(--purple);
+    color: var(--light);
+}
+
+section > div {
+    padding: 3.2rem 0;
+}
+
+section > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+section > div > div h3 {
+    padding: 0;
+    margin: 0;
+}
+
+section > div > div > button {
+    border: none;
+    padding: 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: var(--purple);
+    background: none;
+}
+
+section ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+section ul li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2.4rem;
+    cursor: pointer;
+}
+
+section ul h4 {
+    max-width: 30rem;
+}
+
+section ul li blockquote > cite {
+    font-family: var(--font-family-inter);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--dark-grey);
+    font-style: normal;
+}
+
+section ul li blockquote > cite > em {
+    color: var(--purple);
+    font-style: normal;
+}
+
+section ul li:nth-child(3) {
+    background: var(--light-yellow);
+}
+
+section:nth-child(3) > article {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+section:nth-child(3) > article > div {
+    background: var(--light);
+    padding: 8rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 12rem;
+    z-index: 1;
+}
+section:nth-child(3) > article > div > h2 {
+    margin-bottom: 4.8rem;
+    max-width: 48rem;
+}
+
+section:nth-child(3) > article > div > p {
+    width: 60rem;
+    color: var(--medium-grey);
+}
+
+footer {
+    background: var(--black);
+    padding: 3.2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+footer section {
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 2.4rem;
+    padding: 2.4rem;
+}
+
+footer section h2 {
+    color: var(--light);
+}
