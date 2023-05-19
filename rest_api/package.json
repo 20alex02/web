@@ -1,0 +1,50 @@
+{
+  "name": "iteration-06",
+  "version": "0.1.0",
+  "description": "PB138 - Iteration 6: REST APIs in Node.js/TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "seed": "prisma migrate reset --force && ts-node src/seed/seed.ts",
+    "db:showcase": "prisma migrate reset --force && ts-node src/seed/seed.ts && ts-node src/repositories/showcase.ts",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "watch": "nodemon src/index.ts"
+  },
+  "keywords": [
+    "rest",
+    "api"
+  ],
+  "author": "pb138",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node18-strictest": "^1.0.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "@vitest/coverage-c8": "^0.30.1",
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "nodemon": "^2.0.22",
+    "prisma": "^4.12.0",
+    "supertest": "^6.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3",
+    "vitest": "^0.30.1"
+  },
+  "dependencies": {
+    "@badrap/result": "^0.2.13",
+    "@prisma/client": "^4.12.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.29.3",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "yup": "^1.0.2",
+    "zod": "^3.21.4"
+  }
+}

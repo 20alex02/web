@@ -1,0 +1,48 @@
+//
+// IMPORTANT: do NOT modify this file, unless you implement 
+//            the JWT/Cookie auth bonus!!!
+//
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Employee {
+  id        String       @id @default(uuid())
+  name      String
+  surname   String
+  createdAt DateTime     @default(now())
+  deletedAt DateTime?
+  timetable Attendance[]
+}
+
+model Attendance {
+  id         String         @id @default(uuid())
+  employeeId String
+  employee   Employee       @relation(fields: [employeeId], references: [id])
+  createdAt  DateTime       @default(now())
+  deletedAt  DateTime?
+  from       DateTime
+  to         DateTime
+  // the type would be an enum, but SQLite does not suppport enums
+  // so we solved this by creating a custom table for creating types
+  // types cannot be created by the REST API or the database layer
+  // - they are pre-defined (check the iteration Issue for pre-defined values)
+  typeRef    AttendanceType @relation(fields: [type], references: [type])
+  type       String
+}
+
+model AttendanceType {
+  type    String       @id
+  records Attendance[]
+}
+
+// IF you implement the bonus, you are allowed to create new models 
+// to add auth to the REST API:
