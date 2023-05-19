@@ -1,0 +1,60 @@
+//
+//
+// IMPORTANT: Do NOT modify this file
+//
+//
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+model User {
+  id             String    @id @default(uuid())
+  userName       String    @unique
+  email          String    @unique
+  createdAt      DateTime  @default(now())
+  hashedPassword String
+  salt           String
+  deletedAt      DateTime?
+  avatar         String
+  posts          Post[]
+  comments       Comment[]
+}
+
+model Post {
+  id        String     @id @default(uuid())
+  creator   User       @relation(fields: [creatorId], references: [id])
+  creatorId String
+  createdAt DateTime   @default(now())
+  editedAt  DateTime   @updatedAt
+  deletedAt DateTime?
+  content   String
+  history   PostEdit[]
+  comments  Comment[]
+}
+
+model PostEdit {
+  id       String   @id @default(uuid())
+  post     Post     @relation(fields: [postId], references: [id])
+  postId   String
+  editedAt DateTime
+  content  String
+}
+
+model Comment {
+  id          String    @id @default(uuid())
+  post        Post      @relation(fields: [postId], references: [id])
+  postId      String
+  commenter   User      @relation(fields: [commenterId], references: [id])
+  commenterId String
+  createdAt   DateTime  @default(now())
+  deletedAt   DateTime?
+  content     String
+}

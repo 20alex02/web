@@ -1,0 +1,101 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+model User {
+  id             String        @id @default(uuid())
+  userName       String        @unique
+  email          String        @unique
+  createdAt      DateTime      @default(now())
+  hashedPassword String
+  salt           String
+  deletedAt      DateTime?
+  avatar         String
+  posts          Post[]
+  comments       Comment[]
+  reactions      Reaction[]
+  groupMembers   GroupMember[]
+  messages       Message[]
+}
+
+model Post {
+  id        String     @id @default(uuid())
+  creator   User       @relation(fields: [creatorId], references: [id])
+  creatorId String
+  createdAt DateTime   @default(now())
+  editedAt  DateTime   @updatedAt
+  deletedAt DateTime?
+  content   String
+  history   PostEdit[]
+  comments  Comment[]
+  reactions Reaction[]
+}
+
+model PostEdit {
+  id       String   @id @default(uuid())
+  post     Post     @relation(fields: [postId], references: [id])
+  postId   String
+  editedAt DateTime
+  content  String
+}
+
+model Comment {
+  id          String    @id @default(uuid())
+  post        Post      @relation(fields: [postId], references: [id])
+  postId      String
+  commenter   User      @relation(fields: [commenterId], references: [id])
+  commenterId String
+  createdAt   DateTime  @default(now())
+  deletedAt   DateTime?
+  content     String
+}
+
+model Reaction {
+  id           String    @id @default(uuid())
+  post         Post      @relation(fields: [postId], references: [id])
+  postId       String
+  user         User      @relation(fields: [userId], references: [id])
+  userId       String
+  createdAt    DateTime  @default(now())
+  deletedAt    DateTime?
+  reactionType String
+}
+
+model GroupMember {
+  id             String       @id @default(uuid())
+  user           User         @relation(fields: [userId], references: [id])
+  userId         String
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  conversationId String
+}
+
+model Conversation {
+  id           String        @id @default(uuid())
+  title        String
+  groupMembers GroupMember[]
+  messages     Message[]
+}
+
+model Message {
+  id             String       @id @default(uuid())
+  fromUser       User         @relation(fields: [fromUserId], references: [id])
+  fromUserId     String
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  conversationId String
+  replyTo        Message?     @relation("Reply", fields: [replyToId], references: [id])
+  replyToId      String?
+  replies        Message[]    @relation("Reply")
+
+  content     String
+  createdAt   DateTime  @default(now())
+  deliveredAt DateTime?
+  deletedAt   DateTime?
+}

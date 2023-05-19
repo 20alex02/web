@@ -1,0 +1,54 @@
+@startuml social_network_extended
+
+hide circle
+skinparam Linetype ortho
+skinparam Ranksep 60
+skinparam Nodesep 100
+
+entity User {
+    * id: <<uuid>>
+    ---
+    * userName: string
+    * email: string
+    * createdAt: timestamp
+    ' never store passwords as plaintext!
+    * hashedPassword: string
+    * salt: string
+    deletedAt: timestamp
+    * avatar: URL
+}
+
+entity Post {
+    * id: <<uuid>>
+    ---
+    * creatorId: <<FK>>
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+    * content: string
+}
+
+entity Comment {
+    * id: <<uuid>>
+    ---
+    * postId: <<FK>>
+    * commenterId: <<FK>>
+    * createdAt: timestamp
+    deletedAt: timestamp
+    * content: string
+}
+
+entity PostEdit {
+    * id: <<uuid>>
+    ---
+    * postId: <<FK>>
+    * editedAt: timestamp
+    * originalContent: string
+}
+
+User ||..o{ Post: creates
+User ||..o{ Comment: comments
+Post ||..o{ Comment
+Post ||..o{ PostEdit
+
+@enduml
