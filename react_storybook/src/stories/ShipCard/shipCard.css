@@ -1,0 +1,43 @@
+.ship-card {
+    display: inline-block;
+    overflow: hidden;
+    height: 15rem;
+    width: 15rem;
+    position: relative;
+    border-style: solid;
+    border-width: 0.2rem;
+}
+
+.ship-card__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ship-card__title {
+    text-align: center;
+    margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+    font-size: 1.5rem;
+    display: block;
+    background-color: #2f3146af;
+}
+
+.ship-card__selection-icon-wrapper {
+    text-align: center;
+    margin: 0.2rem 0.1rem 0.2rem 0.1rem;
+    background-color: #2f3146af;
+}
+
+.ship-card__selection-icon {
+    height: 2rem;
+}
+
+.ship-card--unselected {
+    border-color: black;
+}
+
+.ship-card--selected {
+    border-color: yellow;
+}
+

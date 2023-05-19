@@ -1,0 +1,41 @@
+.auction-item {
+    width: 50rem;
+    font-size: 0.8rem;
+}
+
+.auction-item--sold {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.auction-item--active {
+    cursor: pointer;
+}
+
+.auction-item__item-description {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    text-align: center;
+    align-items: center;
+}
+
+.auction-item__text-info {
+    text-align: center;
+}
+
+.item-description__image {
+    width: 2rem;
+}
+
+.auction-item--black-color {
+    background-color: #242020;
+}
+
+.auction-item--blue-color {
+    background-color: #206897;
+}
+
+td {
+    height: 2rem;
+}
