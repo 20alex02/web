@@ -1,0 +1,53 @@
+.profilepicture {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.username {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.header__button {
+    border: none;
+    border-radius: 1rem;
+    padding: 2% 4%;
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+
+.header__button:hover {
+    color: aqua;
+}
+
+.followers {
+    font-size: 0.8rem;
+}
+
+.description {
+    font-size: 1rem;
+}
+
+@media only screen and (1px <= width <= 768px) {
+    .username {
+        font-size: 2rem;
+    }
+
+    .header__button {
+        font-size: 1rem;
+        width: 12rem;
+        height: 2.5rem;
+    }
+
+    .followers {
+        font-size: 1.5rem;
+    }
+
+    .grey {
+        color: #C9C2C2;
+        font-weight: 700;
+    }
+}

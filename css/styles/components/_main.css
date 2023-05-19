@@ -1,0 +1,55 @@
+.container__picture {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s ease-in-out;
+    aspect-ratio: 1;
+}
+
+.container__picture--portrait {
+    aspect-ratio: 1 / 2.03;
+}
+
+.container__picture--landscape {
+    aspect-ratio: 2.03 / 1;
+}
+
+.container__overlay {
+    opacity: 0;
+    justify-self: center;
+    align-self: center;
+    transition: .3s ease-in-out;
+    color: white;
+    font-size: 1rem;
+}
+
+.container:hover .container__overlay {
+    opacity: 1;
+}
+
+.container:hover .container__picture {
+    filter: brightness(25%);
+}
+
+@media only screen and (1px <= width <= 768px) {
+    .container__overlay {
+        font-size: 1.5rem;
+    }
+
+    .container__picture {
+        aspect-ratio: 230 / 196;
+    }
+
+    .main__two .container__picture {
+        aspect-ratio: 112 / 196;
+    }
+
+    .main__five .container__picture {
+        aspect-ratio: 112 / 196;
+    }
+
+    .main__seven .container__picture {
+        aspect-ratio: 112 / 196;
+    }
+}

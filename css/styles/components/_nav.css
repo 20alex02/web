@@ -1,0 +1,43 @@
+.nav {
+    background: #1E1E1E;
+    color: white;
+}
+
+.nav__logo {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+}
+
+.nav__item {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.nav__item--hover:hover {
+    color: aqua;
+}
+
+.icon {
+    width: 1rem;
+    height: auto;
+}
+
+.logout {
+    border: solid;
+    border-color: white;
+    border-radius: 1rem;
+    border-width: 0.1rem;
+    background-color: #1E1E1E;
+    padding: 5%;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media only screen and (1px <= width <= 768px) {
+    .icon {
+        width: 2rem;
+    }
+}

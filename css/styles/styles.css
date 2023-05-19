@@ -1,0 +1,28 @@
+@import url('./layouts/_page.css');
+@import url('./layouts/_header.css');
+@import url('./layouts/_main.css');
+@import url('./layouts/_nav.css');
+@import url('./components/_header.css');
+@import url('./components/_main.css');
+@import url('./components/_nav.css');
+
+hr {
+    background-color: #C9C2C2;
+    border: none;
+    width: 100%;
+    height: 0.05rem;
+}
+
+ .hideondesktop {
+    display: none;
+ }
+
+@media only screen and (1px <= width <= 768px) {
+    .hideonmobile {
+        display: none;
+    }
+
+    .hideondesktop {
+        display: block;
+    }
+}
