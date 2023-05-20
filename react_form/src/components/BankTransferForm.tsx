@@ -41,9 +41,11 @@ export default function BankTransferForm({
           variant="standard"
           value={paymentMethod.bankName}
           {...register('bankName')}
-          onChange={(e) => updateFields({
-            paymentMethod: { ...paymentMethod, bankName: e.target.value },
-          })}
+          onChange={(e) =>
+            updateFields({
+              paymentMethod: { ...paymentMethod, bankName: e.target.value },
+            })
+          }
         />
         <Typography sx={{ color: 'red' }}>
           {errors.bankName?.message}
@@ -59,9 +61,11 @@ export default function BankTransferForm({
           variant="standard"
           value={paymentMethod.iban}
           {...register('iban')}
-          onChange={(e) => updateFields({
-            paymentMethod: { ...paymentMethod, iban: e.target.value },
-          })}
+          onChange={(e) =>
+            updateFields({
+              paymentMethod: { ...paymentMethod, iban: e.target.value },
+            })
+          }
         />
         <Typography sx={{ color: 'red' }}>{errors.iban?.message}</Typography>
       </Grid>
@@ -75,9 +79,14 @@ export default function BankTransferForm({
           variant="standard"
           value={paymentMethod.accountHolderName}
           {...register('accountHolderName')}
-          onChange={(e) => updateFields({
-            paymentMethod: { ...paymentMethod, accountHolderName: e.target.value },
-          })}
+          onChange={(e) =>
+            updateFields({
+              paymentMethod: {
+                ...paymentMethod,
+                accountHolderName: e.target.value,
+              },
+            })
+          }
         />
         <Typography sx={{ color: 'red' }}>
           {errors.accountHolderName?.message}

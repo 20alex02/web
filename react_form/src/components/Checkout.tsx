@@ -48,7 +48,7 @@ function getStepContent(
         />
       );
     case 2:
-      return <PaymentForm {...data} updateFields={updateFields}/>;
+      return <PaymentForm {...data} updateFields={updateFields} />;
     case 3:
       return <AddressForm {...data} updateFields={updateFields} />;
     default:
@@ -123,12 +123,12 @@ export default function Checkout() {
   };
 
   const onSubmit: SubmitHandler<OrderFormData> = () => {
-    handleNext()
+    handleNext();
     if (state.step === steps.length - 1) {
       if (!state.isGift) {
         data.giftRecipient = undefined;
       }
-      console.log(data)
+      console.log(data);
     }
   };
 
@@ -196,7 +196,7 @@ export default function Checkout() {
                   // onClick={
                   //   state.step === steps.length - 1 ? undefined : handleNext
                   // }
-                  type='submit'
+                  type="submit"
                   sx={{ mt: 3, ml: 1 }}
                 >
                   {getButtonText(state.step)}

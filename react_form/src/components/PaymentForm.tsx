@@ -67,7 +67,10 @@ export default function PaymentForm({
           label="Payment method"
           onChange={(e) =>
             updateFields({
-              paymentMethod: { ...paymentMethod, type: e.target.value as PaymentMethodType },
+              paymentMethod: {
+                ...paymentMethod,
+                type: e.target.value as PaymentMethodType,
+              },
             })
           }
         >

@@ -31,7 +31,7 @@ export type BillingInfoData = {
     country: string;
     zipCode: string;
   };
-}
+};
 
 export type OrderFormData = BillingInfoData & {
   /**
@@ -48,7 +48,4 @@ export type OrderFormData = BillingInfoData & {
    * The payment method to use for the order.
    */
   paymentMethod: PaymentMethod;
-
 };
-
-

@@ -23,7 +23,7 @@ export default function PaypalForm({
     formState: { errors },
   } = useForm<PaypalPaymentMethod>({
     resolver: zodResolver(schema),
-    mode: 'onBlur'
+    mode: 'onBlur',
   });
   return (
     <Grid container spacing={3}>
@@ -37,11 +37,15 @@ export default function PaypalForm({
           variant="standard"
           value={paymentMethod.username}
           {...register('username')}
-          onChange={(e) => updateFields({
-            paymentMethod: { ...paymentMethod, username: e.target.value },
-          })}
+          onChange={(e) =>
+            updateFields({
+              paymentMethod: { ...paymentMethod, username: e.target.value },
+            })
+          }
         />
-        <Typography sx={{color: 'red'}}>{errors.username?.message}</Typography>
+        <Typography sx={{ color: 'red' }}>
+          {errors.username?.message}
+        </Typography>
       </Grid>
     </Grid>
   );

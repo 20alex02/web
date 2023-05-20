@@ -22,7 +22,10 @@ export default function GiftTo({
   recipients,
   updateFields,
 }: GiftToProps) {
-  const recipient: GiftRecipient | undefined = giftRecipient === undefined ? undefined : recipients.find(v => v.id === giftRecipient)
+  const recipient: GiftRecipient | undefined =
+    giftRecipient === undefined
+      ? undefined
+      : recipients.find((v) => v.id === giftRecipient);
   return (
     <Autocomplete
       disablePortal

@@ -11,8 +11,8 @@ const schema = z.object({
 });
 
 type CardFormProps = {
-  paymentMethod: CreditCardPaymentMethod
-  updateFields: (fields: { paymentMethod: CreditCardPaymentMethod}) => void;
+  paymentMethod: CreditCardPaymentMethod;
+  updateFields: (fields: { paymentMethod: CreditCardPaymentMethod }) => void;
 };
 
 export default function CardForm({
@@ -38,9 +38,11 @@ export default function CardForm({
           variant="standard"
           value={paymentMethod.cardNumber}
           {...register('cardNumber')}
-          onChange={(e) => updateFields({
-            paymentMethod: { ...paymentMethod, cardNumber: e.target.value },
-          })}
+          onChange={(e) =>
+            updateFields({
+              paymentMethod: { ...paymentMethod, cardNumber: e.target.value },
+            })
+          }
         />
         <Typography sx={{ color: 'red' }}>
           {errors.cardNumber?.message}
@@ -56,9 +58,14 @@ export default function CardForm({
           variant="standard"
           value={paymentMethod.expirationDate}
           {...register('expirationDate')}
-          onChange={(e) => updateFields({
-            paymentMethod: { ...paymentMethod, expirationDate: e.target.value },
-          })}
+          onChange={(e) =>
+            updateFields({
+              paymentMethod: {
+                ...paymentMethod,
+                expirationDate: e.target.value,
+              },
+            })
+          }
         />
         <Typography sx={{ color: 'red' }}>
           {errors.expirationDate?.message}
@@ -75,9 +82,11 @@ export default function CardForm({
           variant="standard"
           value={paymentMethod.cvv}
           {...register('cvv')}
-          onChange={(e) => updateFields({
-            paymentMethod: { ...paymentMethod, cvv: e.target.value },
-          })}
+          onChange={(e) =>
+            updateFields({
+              paymentMethod: { ...paymentMethod, cvv: e.target.value },
+            })
+          }
         />
         <Typography sx={{ color: 'red' }}>{errors.cvv?.message}</Typography>
       </Grid>

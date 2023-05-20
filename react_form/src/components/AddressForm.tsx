@@ -54,7 +54,7 @@ export default function AddressForm({
           {...register('name')}
           onChange={(e) => updateFields({ name: e.target.value })}
         />
-        <Typography sx={{color: 'red'}}>{errors.name?.message}</Typography>
+        <Typography sx={{ color: 'red' }}>{errors.name?.message}</Typography>
       </Grid>
       <Grid item xs={12} sm={6}>
         <TextField
@@ -68,7 +68,7 @@ export default function AddressForm({
           {...register('surname')}
           onChange={(e) => updateFields({ surname: e.target.value })}
         />
-        <Typography sx={{color: 'red'}}>{errors.surname?.message}</Typography>
+        <Typography sx={{ color: 'red' }}>{errors.surname?.message}</Typography>
       </Grid>
       <Grid item xs={12} sm={6}>
         <TextField
@@ -83,7 +83,7 @@ export default function AddressForm({
           {...register('email')}
           onChange={(e) => updateFields({ email: e.target.value })}
         />
-        <Typography sx={{color: 'red'}}>{errors.email?.message}</Typography>
+        <Typography sx={{ color: 'red' }}>{errors.email?.message}</Typography>
       </Grid>
       <Grid item xs={12} sm={6}>
         <TextField
@@ -97,7 +97,9 @@ export default function AddressForm({
           {...register('phoneNumber')}
           onChange={(e) => updateFields({ phoneNumber: e.target.value })}
         />
-        <Typography sx={{color: 'red'}}>{errors.phoneNumber?.message}</Typography>
+        <Typography sx={{ color: 'red' }}>
+          {errors.phoneNumber?.message}
+        </Typography>
       </Grid>
       <Grid item xs={12} sm={6}>
         <TextField
@@ -115,7 +117,9 @@ export default function AddressForm({
             })
           }
         />
-        <Typography sx={{color: 'red'}}>{errors.billingAddress?.address?.message}</Typography>
+        <Typography sx={{ color: 'red' }}>
+          {errors.billingAddress?.address?.message}
+        </Typography>
       </Grid>
       <Grid item xs={12} sm={6}>
         <TextField
@@ -133,7 +137,9 @@ export default function AddressForm({
             })
           }
         />
-        <Typography sx={{color: 'red'}}>{errors.billingAddress?.city?.message}</Typography>
+        <Typography sx={{ color: 'red' }}>
+          {errors.billingAddress?.city?.message}
+        </Typography>
       </Grid>
       <Grid item xs={12} sm={6}>
         <TextField
@@ -173,7 +179,9 @@ export default function AddressForm({
             })
           }
         />
-        <Typography sx={{color: 'red'}}>{errors.billingAddress?.zipCode?.message}</Typography>
+        <Typography sx={{ color: 'red' }}>
+          {errors.billingAddress?.zipCode?.message}
+        </Typography>
       </Grid>
       <Grid item xs={12} sm={6}>
         <TextField
@@ -191,7 +199,9 @@ export default function AddressForm({
             })
           }
         />
-        <Typography sx={{color: 'red'}}>{errors.billingAddress?.country?.message}</Typography>
+        <Typography sx={{ color: 'red' }}>
+          {errors.billingAddress?.country?.message}
+        </Typography>
       </Grid>
     </Grid>
   );
