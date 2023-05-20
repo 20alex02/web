@@ -1,0 +1,78 @@
+[
+  {
+    "id": "188189e1-ad71-5e3a-9a3e-39fae1a501e3",
+    "name": "Sloth Bear Dulkidwu",
+    "quantity": 1,
+    "price": 931,
+    "salePrice": 409.72,
+    "thumbnailUri": "https://www.gravatar.com/avatar/4bb7cf9c0a6cd415e75077bb0e76ae41"
+  },
+  {
+    "id": "5f43e1cb-fc04-57b0-b1b5-f8e8ad41d81e",
+    "name": "Maigles",
+    "quantity": 3,
+    "price": 270.55,
+    "thumbnailUri": "https://www.gravatar.com/avatar/5c31287821d7e5c9b43ec8a0ce67e8cf"
+  },
+  {
+    "id": "d1c620be-f471-5768-a779-d2dd782256b9",
+    "name": "Geoffroy's Cat",
+    "quantity": 4,
+    "price": 496.43,
+    "salePrice": 194.42,
+    "thumbnailUri": "https://www.gravatar.com/avatar/919823c84bf62c81ab06139b2a7fddd4"
+  },
+  {
+    "id": "14b8eaf8-3d1f-58bb-a326-6f3eeac0d93b",
+    "name": "Vasec",
+    "quantity": 3,
+    "price": 860.11,
+    "thumbnailUri": "https://www.gravatar.com/avatar/67135921fd4e77d7153b3bfc05ef3b66"
+  },
+  {
+    "id": "a8e13522-ae97-5096-9b90-e1921ae7cf48",
+    "name": "Ulu",
+    "quantity": 2,
+    "price": 696.27,
+    "salePrice": 112.95,
+    "thumbnailUri": "https://www.gravatar.com/avatar/174109ca21d8afa5c65b85f99ac9cb72"
+  },
+  {
+    "id": "05427177-b634-5c89-b6f1-30760d73def0",
+    "name": "Ant",
+    "quantity": 1,
+    "price": 763.32,
+    "salePrice": 64.08,
+    "thumbnailUri": "https://www.gravatar.com/avatar/62e94a7548049f55d84c5f7f31f33291"
+  },
+  {
+    "id": "a1ad8073-97ff-5d57-84f6-44ccccd3d0f0",
+    "name": "Ponies Cacu",
+    "quantity": 3,
+    "price": 305.72,
+    "salePrice": 217.32,
+    "thumbnailUri": "https://www.gravatar.com/avatar/bbaa5cd262f96cc4f8cdbae1ae870621"
+  },
+  {
+    "id": "b2a76716-ad06-51de-9f03-34dad22984df",
+    "name": "Pat",
+    "quantity": 3,
+    "price": 775.79,
+    "thumbnailUri": "https://www.gravatar.com/avatar/2962f8cfd584eff4eb0917f509d2ea51"
+  },
+  {
+    "id": "62b04f12-3496-53e1-96f6-bb3856321dc3",
+    "name": "Letiwa",
+    "quantity": 4,
+    "price": 362.89,
+    "salePrice": 297.36,
+    "thumbnailUri": "https://www.gravatar.com/avatar/11cffe34bcd524470bf17199a4d4d549"
+  },
+  {
+    "id": "decd0c86-81c2-5ea0-8882-39040449b881",
+    "name": "American Alligator",
+    "quantity": 1,
+    "price": 909.71,
+    "thumbnailUri": "https://www.gravatar.com/avatar/f83ba2ca7a66652b027f6885808e6e4e"
+  }
+]
